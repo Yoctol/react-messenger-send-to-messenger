@@ -8,8 +8,7 @@
 
 ## Screenshot
 
-![](https://user-images.githubusercontent.com/3382565/33435564-6ed7df66-d61d-11e7-8b6c-fdb2d36f0ff9.png)
-![](https://user-images.githubusercontent.com/3382565/33435563-6eacb444-d61d-11e7-85a7-a5d29a418f25.png)
+![](https://user-images.githubusercontent.com/3382565/37636810-164ec576-2c3f-11e8-9d7e-da29a83eaf57.png)
 
 ## Prerequisite
 
