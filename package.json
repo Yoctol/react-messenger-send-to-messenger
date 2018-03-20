@@ -2,7 +2,7 @@
   "name": "react-messenger-send-to-messenger",
   "description": "React component for messenger send to messenger plugin",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "files": [
     "lib"
