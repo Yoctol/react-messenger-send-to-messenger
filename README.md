@@ -1,6 +1,6 @@
 # React Messenger Send To Messenger
 
-> React component for messenger send to messenger plugin
+> React component for [Messenger send to Messenger plugin](https://developers.facebook.com/docs/messenger-platform/discovery/send-to-messenger-plugin)
 
 [![npm](https://img.shields.io/npm/v/react-messenger-send-to-messenger.svg?style=flat-square)](https://www.npmjs.com/package/react-messenger-send-to-messenger)
 [![Build Status](https://travis-ci.org/Yoctol/react-messenger-send-to-messenger.svg?branch=master)](https://travis-ci.org/Yoctol/react-messenger-send-to-messenger)
