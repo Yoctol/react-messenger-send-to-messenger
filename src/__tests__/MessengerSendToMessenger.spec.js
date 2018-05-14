@@ -87,6 +87,22 @@ describe('<MessengerSendToMessenger />', () => {
     ).toBe('true');
   });
 
+  it('render cta_text to DOM element', () => {
+    const wrapper = mount(
+      <MessengerSendToMessenger
+        pageId="<PAGE_ID>"
+        appId="<APP_ID>"
+        ctaText="GET_THIS_IN_MESSENGER"
+      />
+    );
+    expect(
+      wrapper
+        .render()
+        .find('.fb-send-to-messenger')
+        .prop('cta_text')
+    ).toBe('GET_THIS_IN_MESSENGER');
+  });
+
   it('define fbAsyncInit and call loadSdkAsynchronously when facebook-jssdk does not exist', () => {
     mount(<MessengerSendToMessenger pageId="<PAGE_ID>" appId="<APP_ID>" />);
 
