@@ -39,6 +39,7 @@ export default class MessengerSendToMessenger extends Component {
     version: PropTypes.string,
     language: PropTypes.string,
     debug: PropTypes.bool,
+    subscribeEvents: PropTypes.func,
   };
 
   static defaultProps = {
@@ -52,6 +53,7 @@ export default class MessengerSendToMessenger extends Component {
     version: '2.11',
     language: 'en_US',
     debug: false,
+    subscribeEvents: () => true,
   };
 
   componentDidMount() {
@@ -63,13 +65,22 @@ export default class MessengerSendToMessenger extends Component {
   }
 
   setFbAsyncInit() {
-    const { appId, autoLogAppEvents, xfbml, version } = this.props;
+    const {
+      appId,
+      autoLogAppEvents,
+      xfbml,
+      version,
+      subscribeEvents,
+    } = this.props;
     window.fbAsyncInit = () => {
       window.FB.init({
         appId,
         autoLogAppEvents,
         xfbml,
         version: `v${version}`,
+      });
+      window.FB.Event.subscribe('send_to_messenger', e => {
+        if (subscribeEvents) subscribeEvents(e);
       });
     };
   }
