@@ -5,7 +5,6 @@ export default class MessengerSendToMessenger extends Component {
   static propTypes = {
     pageId: PropTypes.string.isRequired,
     appId: PropTypes.string.isRequired,
-
     dataRef: PropTypes.string,
     color: PropTypes.string,
     size: PropTypes.string,
@@ -39,7 +38,7 @@ export default class MessengerSendToMessenger extends Component {
     version: PropTypes.string,
     language: PropTypes.string,
     debug: PropTypes.bool,
-    subscribeEvents: PropTypes.func,
+    onSendToMessenger: PropTypes.func,
   };
 
   static defaultProps = {
@@ -53,7 +52,7 @@ export default class MessengerSendToMessenger extends Component {
     version: '2.11',
     language: 'en_US',
     debug: false,
-    subscribeEvents: () => true,
+    onSendToMessenger: () => {},
   };
 
   componentDidMount() {
@@ -79,8 +78,8 @@ export default class MessengerSendToMessenger extends Component {
         xfbml,
         version: `v${version}`,
       });
-      window.FB.Event.subscribe('send_to_messenger', e => {
-        if (subscribeEvents) subscribeEvents(e);
+      window.FB.Event.subscribe('send_to_messenger', event => {
+        if (onSendToMessenger) onSendToMessenger(event);
       });
     };
   }
