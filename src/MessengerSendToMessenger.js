@@ -69,7 +69,7 @@ export default class MessengerSendToMessenger extends Component {
       autoLogAppEvents,
       xfbml,
       version,
-      subscribeEvents,
+      onSendToMessenger,
     } = this.props;
     window.fbAsyncInit = () => {
       window.FB.init({
