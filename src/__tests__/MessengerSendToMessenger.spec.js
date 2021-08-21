@@ -1,6 +1,6 @@
-import React from 'react';
-import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import Enzyme, { mount } from 'enzyme';
+import React from 'react';
 
 import MessengerSendToMessenger from '../MessengerSendToMessenger';
 
@@ -15,12 +15,9 @@ describe('<MessengerSendToMessenger />', () => {
     const wrapper = mount(
       <MessengerSendToMessenger pageId="<PAGE_ID>" appId="<APP_ID>" />
     );
-    expect(
-      wrapper
-        .render()
-        .find('.fb-send-to-messenger')
-        .prop('page_id')
-    ).toBe('<PAGE_ID>');
+    expect(wrapper.render().find('.fb-send-to-messenger').prop('page_id')).toBe(
+      '<PAGE_ID>'
+    );
   });
 
   it('render color to DOM element', () => {
@@ -31,12 +28,9 @@ describe('<MessengerSendToMessenger />', () => {
         color="white"
       />
     );
-    expect(
-      wrapper
-        .render()
-        .find('.fb-send-to-messenger')
-        .prop('color')
-    ).toBe('white');
+    expect(wrapper.render().find('.fb-send-to-messenger').prop('color')).toBe(
+      'white'
+    );
   });
 
   it('render size to DOM element', () => {
@@ -47,12 +41,9 @@ describe('<MessengerSendToMessenger />', () => {
         size="xlarge"
       />
     );
-    expect(
-      wrapper
-        .render()
-        .find('.fb-send-to-messenger')
-        .prop('size')
-    ).toBe('xlarge');
+    expect(wrapper.render().find('.fb-send-to-messenger').prop('size')).toBe(
+      'xlarge'
+    );
   });
 
   it('render data-ref to DOM element', () => {
@@ -64,10 +55,7 @@ describe('<MessengerSendToMessenger />', () => {
       />
     );
     expect(
-      wrapper
-        .render()
-        .find('.fb-send-to-messenger')
-        .prop('data-ref')
+      wrapper.render().find('.fb-send-to-messenger').prop('data-ref')
     ).toBe('xxx');
   });
 
@@ -80,10 +68,7 @@ describe('<MessengerSendToMessenger />', () => {
       />
     );
     expect(
-      wrapper
-        .render()
-        .find('.fb-send-to-messenger')
-        .prop('enforce_login')
+      wrapper.render().find('.fb-send-to-messenger').prop('enforce_login')
     ).toBe('true');
   });
 
@@ -96,10 +81,7 @@ describe('<MessengerSendToMessenger />', () => {
       />
     );
     expect(
-      wrapper
-        .render()
-        .find('.fb-send-to-messenger')
-        .prop('cta_text')
+      wrapper.render().find('.fb-send-to-messenger').prop('cta_text')
     ).toBe('GET_THIS_IN_MESSENGER');
   });
 
