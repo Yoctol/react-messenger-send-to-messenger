@@ -3,6 +3,11 @@
   "version": "0.2.0",
   "description": "React component for messenger send to messenger plugin",
   "license": "MIT",
+  "homepage": "https://github.com/Yoctol/react-messenger-send-to-messenger",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yoctol/react-messenger-send-to-messenger.git"
+  },
   "main": "lib/index.js",
   "files": [
     "lib"
